@@ -8,14 +8,14 @@ const app = express();
 app.use(cors());  // Using CORS middleware to handle cross-origin requests
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static('public'));
+app.use(express.static('public'));  // Serve static files from the 'public' directory
 
 const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, () => {
-    console.log(`Server started on http://localhost:${PORT}`);
+// Route to serve the notes.html file
+app.get('/notes', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'notes.html'));
 });
-
 
 app.get('/api/notes', (req, res) => {
     try {
@@ -51,6 +51,12 @@ app.delete('/api/notes/:id', (req, res) => {
         res.status(500).send('Internal server error.');
     }
 });
+
+app.listen(PORT, () => {
+    console.log(`Server started on http://localhost:${PORT}`);
+});
+
+
 
 
 
