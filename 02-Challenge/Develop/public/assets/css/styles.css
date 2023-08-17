@@ -5,9 +5,9 @@ body {
   padding: 0;
 }
 
-.save-note {
+/* .save-note {
   display: none;
-}
+} */
 
 .icons i {
   margin-left: 15px;
@@ -75,4 +75,55 @@ body {
   border-right: none;
   padding: 20px;
   cursor: pointer;
+}
+
+.save-note.active {
+  display: inline-block;
+  background-color: #007BFF;
+  color: #FFFFFF;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.save-note.active:hover {
+  background-color: #0056b3;
+}
+
+.delete-icon {
+  color: #FF0000;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: color 0.3s ease;
+}
+
+.delete-icon:hover {
+  color: #b30000;
+}
+
+.delete-note {
+  cursor: pointer;
+  padding: 5px 10px;
+  border: 1px solid #dc3545;
+  border-radius: 5px;
+  color: #dc3545;
+  margin-left: 20px;
+  float: right;
+  transition: background-color 0.3s ease;
+}
+
+.delete-note:hover {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.list-item-title {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.list-item-title:hover {
+  color: #007bff; /* This is a blue color, but you can adjust as per your design preference */
+  text-decoration: underline;
 }
