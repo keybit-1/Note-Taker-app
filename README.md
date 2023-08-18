@@ -23,6 +23,7 @@ An Express.js web application for creating, viewing, and managing notes.
 `npm start`
 
 5. **Access in Browser**
+Navigate to `http://localhost:3000` to use the app.
 
 ## Deployment
 The application is hosted on Heroku for easy access. To view the live application, visit: [Heroku Deployed Link](https://ths-note-app-216bf97f5052.herokuapp.com).
