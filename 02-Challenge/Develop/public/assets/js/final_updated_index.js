@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const BASE_URL = 'http://localhost:3000';
+    const BASE_URL = window.location.hostname === 'localhost' ? 'http://localhost:3000' : 'https://ths-note-app-216bf97f5052.herokuapp.com';
+
     
     const noteTitle = document.querySelector('.note-title');
     const noteText = document.querySelector('.note-textarea');
